@@ -1,0 +1,42 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Employee {
+  id           Int           @id @default(autoincrement())
+  name         String
+  slot         Int           @unique
+  createdAt    DateTime      @default(now()) @map("created_at")
+  updatedAt    DateTime      @updatedAt @map("updated_at")
+  transactions Transaction[]
+
+  @@map("employees")
+}
+
+model Price {
+  id        Int      @id @default(autoincrement())
+  type      String   @unique
+  price     Int
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("prices")
+}
+
+model Transaction {
+  id         Int      @id @default(autoincrement())
+  employeeId Int      @map("employee_id")
+  motorType  String   @map("motor_type")
+  price      Int
+  date       String
+  createdAt  DateTime @default(now()) @map("created_at")
+  employee   Employee @relation(fields: [employeeId], references: [id])
+
+  @@index([date])
+  @@index([employeeId])
+  @@map("transactions")
+}
