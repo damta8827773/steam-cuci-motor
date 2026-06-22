@@ -17,7 +17,7 @@ export default function Layout() {
 
       <footer className="border-t border-slate-800/50 py-4">
         <div className="container mx-auto px-4 max-w-7xl text-center text-slate-600 text-xs">
-          Steam Cuci Motor — Sistem Kasir &copy; {new Date().getFullYear()}
+          Steam Cuci Motor - Sistem Kasir &copy; {new Date().getFullYear()}
         </div>
       </footer>
 

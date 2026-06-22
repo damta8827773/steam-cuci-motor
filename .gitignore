@@ -7,14 +7,14 @@ node_modules/
 dist/
 build/
 
-# Environment variables — NEVER commit these
+# Environment variables - NEVER commit these
 .env
 .env.local
 .env.*.local
 backend/.env
 backend/.env.local
 
-# Database files — contains sensitive transaction data
+# Database files - contains sensitive transaction data
 backend/data/
 *.db
 *.db-journal

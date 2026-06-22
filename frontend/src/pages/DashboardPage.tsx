@@ -194,7 +194,7 @@ export default function DashboardPage() {
         <div className="lg:col-span-2 glass-card p-6">
           <h2 className="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-5 flex items-center gap-2">
             <BarChart2 size={14} />
-            Transaksi per Jam — Hari Ini
+            Transaksi per Jam - Hari Ini
           </h2>
           {hourly.length === 0 ? (
             <div className="flex items-center justify-center h-48 text-slate-600 text-sm">
@@ -293,7 +293,7 @@ export default function DashboardPage() {
       <div className="glass-card p-6">
         <h2 className="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-5 flex items-center gap-2">
           <Users size={14} />
-          Performa Karyawan — Hari Ini
+          Performa Karyawan - Hari Ini
         </h2>
         <div className="space-y-3">
           {empStats.map((emp, i) => {

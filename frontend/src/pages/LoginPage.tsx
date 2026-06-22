@@ -59,7 +59,7 @@ export default function LoginPage() {
             <Droplets size={28} className="text-white" />
           </motion.div>
           <h1 className="text-2xl font-bold text-slate-100">Steam Cuci Motor</h1>
-          <p className="text-slate-500 text-sm mt-1">Portal Pemilik — Akses Terbatas</p>
+          <p className="text-slate-500 text-sm mt-1">Portal Pemilik - Akses Terbatas</p>
         </div>
 
         <div className="glass-card p-8">

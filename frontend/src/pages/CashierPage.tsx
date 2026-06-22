@@ -220,7 +220,7 @@ export default function CashierPage() {
               <>
                 <CheckCircle2 size={18} />
                 {selectedEmployee && selectedMotor
-                  ? `Proses — ${formatCurrency(prices[selectedMotor])}`
+                  ? `Proses - ${formatCurrency(prices[selectedMotor])}`
                   : 'Proses Pembayaran'
                 }
               </>

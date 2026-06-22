@@ -10,7 +10,7 @@
 [![Prisma](https://img.shields.io/badge/Prisma-5-2D3748?style=flat-square&logo=prisma&logoColor=white)](https://prisma.io/)
 [![Vite](https://img.shields.io/badge/Vite-5-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev/)
 
-Aplikasi kasir full-stack berbasis web untuk usaha cuci motor steam. Dirancang dengan arsitektur production-grade — clean separation antara backend REST API dan frontend SPA, keamanan berbasis JWT, serta laporan keuangan otomatis via email.
+Aplikasi kasir full-stack berbasis web untuk usaha cuci motor steam. Dirancang dengan arsitektur production-grade - clean separation antara backend REST API dan frontend SPA, keamanan berbasis JWT, serta laporan keuangan otomatis via email.
 
 </div>
 
@@ -20,7 +20,7 @@ Aplikasi kasir full-stack berbasis web untuk usaha cuci motor steam. Dirancang d
 
 | Fitur | Deskripsi |
 |---|---|
-| 🧾 **Kasir Real-time** | Input transaksi tanpa login — pilih karyawan & tipe motor, harga otomatis tampil |
+| 🧾 **Kasir Real-time** | Input transaksi tanpa login - pilih karyawan & tipe motor, harga otomatis tampil |
 | 📊 **Dashboard Pemilik** | Statistik harian, grafik per jam, distribusi tipe motor, tren 7 hari |
 | 👥 **Manajemen Karyawan** | 7 slot karyawan, nama dapat diedit langsung oleh pemilik |
 | 💰 **Manajemen Harga** | Pemilik dapat mengubah harga kecil/sedang/besar kapan saja |
@@ -34,7 +34,7 @@ Aplikasi kasir full-stack berbasis web untuk usaha cuci motor steam. Dirancang d
 
 ```
 steam/
-├── backend/                  # REST API — Node.js + Express + TypeScript
+├── backend/                  # REST API - Node.js + Express + TypeScript
 │   ├── prisma/
 │   │   └── schema.prisma     # Database schema (SQLite)
 │   ├── src/
@@ -46,15 +46,15 @@ steam/
 │   │   └── index.ts          # Application entry point
 │   └── .env.example          # Environment variable template
 │
-├── frontend/                 # SPA — React 18 + TypeScript + Vite
+├── frontend/                 # SPA - React 18 + TypeScript + Vite
 │   └── src/
 │       ├── context/          # Auth context (JWT state management)
 │       ├── lib/              # Axios instance with interceptors
 │       ├── pages/            # Route-level page components
-│       │   ├── CashierPage   # Public — input transaksi
-│       │   ├── DashboardPage # Protected — statistik & grafik
-│       │   ├── PricesPage    # Protected — kelola harga
-│       │   └── EmployeesPage # Protected — kelola karyawan
+│       │   ├── CashierPage   # Public - input transaksi
+│       │   ├── DashboardPage # Protected - statistik & grafik
+│       │   ├── PricesPage    # Protected - kelola harga
+│       │   └── EmployeesPage # Protected - kelola karyawan
 │       └── types/            # Shared TypeScript interfaces
 │
 ├── START.bat                 # One-click startup (Windows)
@@ -85,37 +85,37 @@ Data keuangan lengkap hanya bisa diakses setelah autentikasi.
 
 ## 🔒 Keamanan
 
-- **Autentikasi JWT** — Token 24 jam, refresh otomatis
-- **Akses terbatas** — Hanya satu email owner yang dapat login; semua email lain diblokir dengan pesan jelas
-- **Data sensitif aman** — Pendapatan & statistik keuangan hanya tampil di dashboard (login) dan dikirim ke email pemilik, **tidak** terekspos ke karyawan
-- **Helmet.js** — HTTP security headers (XSS, CSRF, clickjacking protection)
-- **Validasi Zod** — Semua input API divalidasi sebelum diproses
-- **Environment variables** — Kredensial tidak pernah hardcoded (`.env` di-gitignore)
+- **Autentikasi JWT** - Token 24 jam, refresh otomatis
+- **Akses terbatas** - Hanya satu email owner yang dapat login; semua email lain diblokir dengan pesan jelas
+- **Data sensitif aman** - Pendapatan & statistik keuangan hanya tampil di dashboard (login) dan dikirim ke email pemilik, **tidak** terekspos ke karyawan
+- **Helmet.js** - HTTP security headers (XSS, CSRF, clickjacking protection)
+- **Validasi Zod** - Semua input API divalidasi sebelum diproses
+- **Environment variables** - Kredensial tidak pernah hardcoded (`.env` di-gitignore)
 
 ---
 
 ## ⚙️ Teknologi
 
 ### Backend
-- **Runtime** — Node.js 20+
-- **Framework** — Express.js 4
-- **Language** — TypeScript 5 (strict mode)
-- **ORM** — Prisma 5 + SQLite
-- **Auth** — JSON Web Tokens (jsonwebtoken)
-- **Validation** — Zod
-- **Email** — Nodemailer (Gmail SMTP)
-- **Security** — Helmet, bcryptjs, CORS
+- **Runtime** - Node.js 20+
+- **Framework** - Express.js 4
+- **Language** - TypeScript 5 (strict mode)
+- **ORM** - Prisma 5 + SQLite
+- **Auth** - JSON Web Tokens (jsonwebtoken)
+- **Validation** - Zod
+- **Email** - Nodemailer (Gmail SMTP)
+- **Security** - Helmet, bcryptjs, CORS
 
 ### Frontend
-- **Framework** — React 18 + TypeScript
-- **Bundler** — Vite 5
-- **Styling** — Tailwind CSS 3
-- **Animations** — Framer Motion 11
-- **Charts** — Recharts 2
-- **HTTP** — Axios (dengan interceptors)
-- **Routing** — React Router DOM 6
-- **Notifications** — React Hot Toast
-- **Icons** — Lucide React
+- **Framework** - React 18 + TypeScript
+- **Bundler** - Vite 5
+- **Styling** - Tailwind CSS 3
+- **Animations** - Framer Motion 11
+- **Charts** - Recharts 2
+- **HTTP** - Axios (dengan interceptors)
+- **Routing** - React Router DOM 6
+- **Notifications** - React Hot Toast
+- **Icons** - Lucide React
 
 ---
 
@@ -127,7 +127,7 @@ Data keuangan lengkap hanya bisa diakses setelah autentikasi.
 
 ### Setup Pertama
 
-**Windows** — jalankan file ini:
+**Windows** - jalankan file ini:
 ```
 SETUP.bat
 ```
@@ -179,10 +179,10 @@ START.bat
 
 **Manual:**
 ```bash
-# Terminal 1 — Backend
+# Terminal 1 - Backend
 cd backend && npx tsx src/index.ts
 
-# Terminal 2 — Frontend
+# Terminal 2 - Frontend
 cd frontend && npx vite
 ```
 
@@ -257,7 +257,7 @@ model Transaction {
 
 ## 📄 Lisensi
 
-MIT License — bebas digunakan dan dimodifikasi untuk keperluan bisnis.
+MIT License - bebas digunakan dan dimodifikasi untuk keperluan bisnis.
 
 ---
 

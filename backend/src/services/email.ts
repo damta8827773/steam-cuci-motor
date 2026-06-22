@@ -82,7 +82,7 @@ export async function sendDailyReport(data: DailyReportData): Promise<{ success:
 
     <div style="background: linear-gradient(135deg, #0ea5e9, #6366f1); padding: 32px; text-align: center;">
       <h1 style="color: white; margin: 0; font-size: 24px; font-weight: 700;">💧 Steam Cuci Motor</h1>
-      <p style="color: rgba(255,255,255,0.85); margin: 8px 0 0; font-size: 14px;">Laporan Harian Sensitif — Hanya untuk Pemilik</p>
+      <p style="color: rgba(255,255,255,0.85); margin: 8px 0 0; font-size: 14px;">Laporan Harian Sensitif - Hanya untuk Pemilik</p>
     </div>
 
     <div style="padding: 32px;">
@@ -144,7 +144,7 @@ export async function sendDailyReport(data: DailyReportData): Promise<{ success:
     <div style="background: #f8fafc; padding: 20px 32px; text-align: center; border-top: 1px solid #e5e7eb;">
       <p style="margin: 0; color: #94a3b8; font-size: 12px;">
         Email ini dikirim secara otomatis oleh Sistem Kasir Steam Cuci Motor<br>
-        Informasi ini bersifat <strong style="color: #ef4444;">RAHASIA</strong> — hanya untuk pemilik
+        Informasi ini bersifat <strong style="color: #ef4444;">RAHASIA</strong> - hanya untuk pemilik
       </p>
     </div>
   </div>
@@ -156,7 +156,7 @@ export async function sendDailyReport(data: DailyReportData): Promise<{ success:
     await transporter.sendMail({
       from: `"Steam Cuci Motor 💧" <${process.env.GMAIL_USER}>`,
       to: reportEmail,
-      subject: `📊 Laporan Harian Steam — ${formatDate(data.date)}`,
+      subject: `📊 Laporan Harian Steam - ${formatDate(data.date)}`,
       html,
     });
 
